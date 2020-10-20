@@ -1,0 +1,92 @@
+.news {
+	overflow: hidden;
+
+	&__header {
+		margin-bottom: 30px;
+
+		@include media(sm) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include media(md) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__heading {
+		margin: 0 0 18px;
+		color: $color-red;
+
+		@include media(sm) {
+			margin: 0;
+			align-self: baseline;
+		}
+	}
+
+	&__all {
+		@include text(16px, 21px, $color-grey);
+		font-weight: 300;
+
+		@include media(sm) {
+			align-self: baseline;
+		}
+
+		@include media(md) {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			color: $color-main;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+
+	&__list {
+		@include list-reset;
+		//margin-top: -30px;
+		margin-bottom: 37px;
+
+		@include media(md) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: -29px;
+			margin-left: -15px;
+			margin-bottom: 80px;
+		}
+
+		@include media(xl) {
+			margin-left: -30px;
+		}
+	}
+
+	&__item {
+		margin: 29px auto 0;
+
+		@include media(md) {
+			width: calc(33.33% - 15px);
+			margin-left: 15px;
+		}
+
+		@include media(xl) {
+			width: calc(33.33% - 30px);
+			margin-left: 30px;
+		}
+	}
+
+	&__more {
+		@include text(16px, 21px, $color-red);
+		letter-spacing: 0.05em;
+
+		@include media(md) {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+}

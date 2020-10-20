@@ -16,7 +16,7 @@ block content
 						span.visually-hidden search
 						+icon('icon-loupe')(width="26", height="26")
 
-	section.site-sections
+	section.webpage__site-sections.site-sections
 		.site-sections__inner.container
 			h2.visually-hidden Site sections
 			ul.site-sections__list
@@ -27,5 +27,24 @@ block content
 							span.site-sections__icon
 								+icon('icon-right')(width="7", height="13")
 
+	section.news
+		.news__inner.container
+			header.news__header
+				h2.news__heading.heading News
+				a.news__all(href="#") View all News
+			ul.news__list
+				each item, index in NEWS
+					li.news__item.news-card
+						a.news-card__image(href="#")
+							picture
+								source(type="image/webp", srcset="img/news-" + (index + 1) + ".webp 1x, img/news-" + (index + 1) + "@2x.webp 2x")
+								img(src="img/news-" + (index + 1) + ".jpg", srcset="img/news-" + (index + 1) + "@2x.jpg 2x", width="367", height="240", alt="image")
+						.news-card__category Feature
+						h3.news-card__heading
+							a(href="#")= item
+						time.news-card__date(datetime="2020-05-03") May 3, 2020
+					- i++;
+
+			a.news__more(href="#") More News
 block footer
 	include modules/footer.pug

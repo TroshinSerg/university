@@ -1,0 +1,86 @@
+.news-card {
+	max-width: 367px;
+
+	&__image {
+		display: block;
+		margin-bottom: 20px;
+		overflow: hidden;
+		transition: opacity $default-transition-settings;
+
+		@include media(xl) {
+			margin-bottom: 30px;
+		}
+
+		img {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			display: block;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			opacity: 0.7;
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
+	}
+
+	&__category {
+		margin-bottom: 10px;
+
+		@include text(14px, 18px, $color-red);
+		font-weight: 300;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+
+		@include media(xl) {
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+
+	&__heading {
+		margin: 0 0 6px;
+
+		@include text(18px, 24px);
+		font-weight: 700;
+		letter-spacing: 0.05em;
+
+		@include media(xl) {
+			margin-bottom: 17px;
+			font-size: 24px;
+			line-height: 32px;
+		}
+
+		a {
+			color: $color-main;
+			transition: color $default-transition-settings;
+
+			&:hover,
+			&:focus {
+				outline: none;
+				color: $color-grey;
+			}
+
+			&:active {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__date {
+		@include text(14px, 18px, $color-grey);
+		font-weight: 300;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+
+		@include media(xl) {
+			font-size: 16px;
+			line-height: 21px;
+		}
+	}
+}

@@ -18,7 +18,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $font--main;
-	background-color: grey;
+	//background-color: grey;
 
 	@include text();
 	font-weight: 400;
@@ -49,13 +49,13 @@ a {
 
 /*
 
-			&:hover,
-			&:focus {
-				outline: none;
-				color: lighten($color-red, 5%);
-			}
+		&:hover,
+		&:focus {
+			outline: none;
+			color: lighten($color-red, 5%);
+		}
 
-			&:active {
-				opacity: .7;
-			}
+		&:active {
+			opacity: .7;
+		}
 */
