@@ -1,48 +1,60 @@
 html {
-  box-sizing: border-box;
-  //font-size: calc(1vw + 1vh + .5vmin);
+	box-sizing: border-box;
+	//font-size: calc(1vw + 1vh + .5vmin);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", "Arial", sans-serif;
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: $font--main;
 
-  @include text();
-  //font: 1rem/1.6 "Montserrat", "Arial", sans-serif;
-  font-weight: 400;
+	@include text();
+	font-weight: 400;
 }
 
 main {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
 }
 
 .d-none {
-  display: none !important;
+	display: none !important;
 }
+
+/*
+
+			&:hover,
+			&:focus {
+				outline: none;
+				color: lighten($color-red, 5%);
+			}
+
+			&:active {
+				opacity: .7;
+			}
+*/

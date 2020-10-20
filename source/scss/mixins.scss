@@ -1,33 +1,33 @@
 @mixin list-reset() {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-@mixin text($fz: 14px, $lh: 1.57, $c: $color-main) {
-  font-size: $fz;
-  line-height: $lh;
-  color: $c;
+@mixin text($fz: 18px, $lh: 1.33, $c: $color-main) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $c;
 }
 
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
-  content: $content;
-  display: $display;
-  position: $pos;
+	content: $content;
+	display: $display;
+	position: $pos;
 }
 
 @mixin media($media) {
-  @each $breakpoint, $breakpointValue in $breakpoints {
-    @if $media == $breakpoint {
-      @media (min-width: $breakpointValue) {
-        @content;
-      }
-    }
-  }
+	@each $breakpoint, $breakpointValue in $breakpoints {
+		@if $media == $breakpoint {
+			@media (min-width: $breakpointValue) {
+				@content;
+			}
+		}
+	}
 }
 
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
+	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+		@content;
+	}
 }

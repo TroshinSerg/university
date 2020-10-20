@@ -1,7 +1,7 @@
 .heading {
   @include text(24px, 1.25);
 
-  @include _768 {
+  @include media(md) {
     font-size: 36px;
   }
 }

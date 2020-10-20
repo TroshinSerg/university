@@ -1,2 +1,9 @@
-header.header 
+.notify
+	.notify__inner.container
+		.notify__text You have 1 expired deadline and 11 deadlines expires soon.
+		a.notify__link(href="#") View To-Do List
+		button.notify__close(type="button")
+			span.visually-hidden Close
+			+icon('icon-close')(width="14", height="14")
+header.header
 	.container Хедер
