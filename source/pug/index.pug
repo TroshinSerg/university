@@ -16,7 +16,16 @@ block content
 						span.visually-hidden search
 						+icon('icon-loupe')(width="26", height="26")
 
-
+	section.site-sections
+		.site-sections__inner.container
+			h2.visually-hidden Site sections
+			ul.site-sections__list
+				each item in SITE_SECTIONS
+					li.site-sections__item
+						a.site-sections__link(href="#")
+							span.site-sections__text= item
+							span.site-sections__icon
+								+icon('icon-right')(width="7", height="13")
 
 block footer
 	include modules/footer.pug
