@@ -1,0 +1,83 @@
+.user {
+	position: relative;
+
+	&__image {
+		display: block;
+		width: 36px;
+		height: 36px;
+
+		border-radius: 50%;
+		overflow: hidden;
+		transition: box-shadow $default-transition-settings;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 2px $color-red;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+
+	&__dropdown {
+		@include list-reset;
+
+		position: absolute;
+		bottom: 0;
+		right: -19px;
+		transform: translateY(calc(100% + 21px));
+		width: 180px;
+		padding: 13px 0 17px;
+		border-radius: 15px;
+		border: solid 1px $color-grey2;
+		background-color: $color-white;
+
+		display: none;
+
+		&::before {
+			content: "";
+			position: absolute;
+			right: 30px;
+			top: 0;
+			transform: translateY(-50%) rotate(45deg);
+			width: 15px;
+			height: 15px;
+			border: solid 1px $color-grey2;
+			border-right: none;
+			border-bottom: none;
+			background-color: $color-white;
+		}
+
+		&-item {
+			padding: 0 20px;
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&-link {
+			@include text(14px, 18px, $color-grey);
+			transition: color $default-transition-settings;
+
+			&:hover,
+			&:focus {
+				outline: none;
+				color: $color-main;
+			}
+
+			&:active {
+				opacity: 0.7;
+			}
+		}
+	}
+}

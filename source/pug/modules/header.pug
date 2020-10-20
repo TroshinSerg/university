@@ -16,10 +16,11 @@ header.header
 				each item in MENU
 					li.navigation__item
 						a.navigation__link(href="#")= item
-		.notifications
+		.header__notifications.notifications
 			button.notifications__btn(type="button")
 				span.visually-hidden Show notifications
 				+icon('icon-lightning')(width="18", height="36")
+			span.notifications__count 12
 			.notifications__dropdown
 				.notifications__dropdown-header
 					.notifications__dropdown-heading Notifications
@@ -33,8 +34,8 @@ header.header
 
 				//- No notifications
 
-		.user
-			a.user__link(href="#")
+		.header__user.user
+			a.user__image(href="#")
 				picture
 					source(type="image/webp", srcset="img/Account.webp 1x, img/Account@2x.webp 2x")
 					img(src="img/Account.jpg", srcset="img/Account@2x.jpg 2x", width="36", height="36", alt="User avatar")
@@ -42,3 +43,6 @@ header.header
 				each item in USER
 					li.user__dropdown-item
 						a.user__dropdown-link(href="#")= item
+
+		button.header__toggle.menu-toggle(type="button", aria-pressed="false")
+			span.visually-hidden Menu

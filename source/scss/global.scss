@@ -18,6 +18,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $font--main;
+	background-color: grey;
 
 	@include text();
 	font-weight: 400;
