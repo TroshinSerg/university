@@ -67,3 +67,72 @@ var duration = 400;
 		isOpen = false;
 	}
 })();
+
+(function() {
+	$('.js-events-slider').owlCarousel({
+    loop: true,
+		margin: 30,
+		responsiveClass: true,
+		navContainer: '.events__nav',
+    responsive: {
+			0: {
+				items: 2,
+				nav: false
+			},
+			576: {
+				items:3,
+				nav: false
+			},
+			992: {
+				items: 2,
+				margin: 46,
+				nav: true
+			},
+			1200: {
+				items: 3,
+				nav: true
+			}
+
+
+
+
+    }
+	});
+})();
+
+(function() {
+	var overlayClass = 'webpage__overlay';
+	var modal = $('.modal');
+	var modalCloseBtn = modal.find('.modal__close');
+
+	setTimeout(function() {
+		$('body').append(setOverlay());
+
+		var overlay = $('.' + overlayClass);
+		overlay.fadeIn(duration);
+		modal.delay(duration).fadeIn(duration);
+		modalCloseBtn.on('click', closeModal);
+
+	}, 5000);
+
+	function setOverlay() {
+		var overlay = $('<div></div>');
+		overlay.addClass(overlayClass);
+		overlay.on('click', closeModal);
+		modalCloseBtn.off('click', closeModal);
+		return overlay;
+	}
+
+	function closeModal() {
+		var overlay = $('.' + overlayClass);
+
+		modal.fadeOut(duration);
+		overlay.delay(duration).fadeOut(duration);
+		setTimeout(function() {
+			$('body').remove(overlay);
+		}, 800)
+
+
+
+	}
+})();

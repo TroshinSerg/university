@@ -1,0 +1,138 @@
+.events {
+	overflow: hidden;
+
+	&__header {
+		margin-bottom: 30px;
+
+		@include media(sm) {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		@include media(md) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__heading {
+		margin: 0 0 18px;
+		color: $color-red;
+
+		@include media(sm) {
+			margin: 0;
+			align-self: baseline;
+		}
+	}
+
+	&__all {
+		@include text(16px, 21px, $color-grey);
+		font-weight: 300;
+
+		@include media(sm) {
+			align-self: baseline;
+		}
+
+		@include media(md) {
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		&:hover,
+		&:focus {
+			outline: none;
+			color: $color-main;
+		}
+
+		&:active {
+			opacity: 0.7;
+		}
+	}
+
+	&__wrapper {
+		overflow: hidden;
+		width: calc(100% + 20px);
+		margin-right: -20px;
+
+		@include media(lg) {
+			display: flex;
+			width: 100%;
+
+			margin-right: 0;
+		}
+
+		@include media(xl) {
+			overflow: visible;
+		}
+	}
+
+	&__nav {
+		display: none;
+
+		@include media(lg) {
+			display: flex;
+			justify-content: space-between;
+			width: 120px;
+			margin: 22px auto 0;
+			align-self: center;
+		}
+
+		@include media(xl) {
+			margin-left: 0;
+		}
+
+		.owl-prev,
+		.owl-next {
+			display: block;
+			width: 50px;
+			height: 16px;
+			padding: 0;
+			margin: 0;
+			border: none;
+			background-color: transparent;
+			font-size: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			transition: opacity $default-transition-settings;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				outline: none;
+				opacity: 0.7;
+			}
+
+			&:active {
+				opacity: 0.5;
+			}
+		}
+
+		.owl-prev {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 51 16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L2.414 8l5.657-5.657A1 1 0 006.657.93L.293 7.293zM51 7H1v2h50V7z'/%3e%3c/svg%3e ");
+		}
+
+		.owl-next {
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 51 16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M50.707 8.707a1 1 0 000-1.414L44.343.929a1 1 0 10-1.414 1.414L48.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h50V7H0v2z'/%3e%3c/svg%3e ");
+		}
+	}
+
+	&__slider {
+		min-width: 510px;
+
+		@include media(sm) {
+			width: 626px;
+			min-width: 930px;
+		}
+
+		@include media(lg) {
+			min-width: 0;
+		}
+
+		@include media(xl) {
+			margin-left: auto;
+			width: 962px;
+		}
+	}
+
+	&__item {
+	}
+}

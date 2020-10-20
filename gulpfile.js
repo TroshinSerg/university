@@ -19,7 +19,7 @@ const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 const del = require("del");
 
-let scriptsPath = ['source/js/main.js'];
+let scriptsPath = ['node_modules/owl.carousel/dist/owl.carousel.js', 'source/js/main.js'];
 
 gulp.task('server', function() {
 	browserSync.init({

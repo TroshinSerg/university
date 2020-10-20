@@ -27,6 +27,29 @@ block content
 							span.site-sections__icon
 								+icon('icon-right')(width="7", height="13")
 
+	section.webpage__events.events
+		.events__inner.container
+			header.events__header
+				h2.events__heading.heading Upcoming Events
+				a.events__all(href="#") View all Events
+
+			.events__wrapper
+				.events__nav
+				.events__slider.js-events-slider.owl-carousel
+					each item in EVENTS
+						.events__item.event
+							h3.event__heading
+								a(href="#")= item.title
+							.event__category= item.category
+
+							.event__info
+								time.event__date(datetime="2020-05-13") 5/13/2020
+								ul.event__list
+									li.event__item 19 PM — 22 PM
+									li.event__item Library
+
+
+
 	section.news
 		.news__inner.container
 			header.news__header
