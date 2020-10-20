@@ -1,2 +1,15 @@
-footer.footer 
-	.container Футер
+footer.footer
+	.footer__top
+		.container
+			a.footer__logo.logo
+				picture
+					source(type="image/webp", srcset="img/Logo.webp 1x, img/Logo@2x.webp 2x")
+					img(src="img/Logo.png", srcset="img/Logo@2x.png 2x", width="112", height="25", alt="logo")
+			address.footer__address 25800 Carlos Bee Boulevard Hayward, CA 94542 510‑885‑3000
+	.footer__bottom
+		.container
+			ul.footer__social
+				each item in ['Facebook', 'Twitter', 'Instagram', 'Pinterest']
+					li.footer__social-item
+						a.footer__social-link(href="#", target="_blank")= item
+			.footer__copyright © 2020 California State University, East Bay. All rights reserved.
