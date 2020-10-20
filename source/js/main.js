@@ -32,6 +32,7 @@ var duration = 400;
 			closeDropdown();
 		} else {
 			notificationsDropdown.fadeIn(duration);
+			$('.user__dropdown').fadeOut(duration);
 			$('body').on('click', closeDropdown);
 			isOpen = true;
 		}
@@ -56,6 +57,7 @@ var duration = 400;
 			closeDropdown();
 		} else {
 			userDropdown.fadeIn(duration);
+			$('.notifications__dropdown').fadeOut(duration);
 			$('body').on('click', closeDropdown);
 			isOpen = true;
 		}
@@ -129,7 +131,7 @@ var duration = 400;
 		modal.fadeOut(duration);
 		overlay.delay(duration).fadeOut(duration);
 		setTimeout(function() {
-			$('body').remove(overlay);
+			overlay.remove();
 		}, 800)
 
 
