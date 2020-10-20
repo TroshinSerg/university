@@ -4,15 +4,12 @@ block variables
 	- let isHome = true;
 
 block content
-	.container
-		h1.heading Заголовок
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque optio reprehenderit sunt sequi aperiam quas voluptas ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque optio reprehenderit sunt sequi aperiam quas voluptas ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque optio reprehenderit sunt sequi aperiam quas voluptas ab.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque optio reprehenderit sunt sequi aperiam quas voluptas ab.
-		p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque optio reprehenderit sunt sequi aperiam quas voluptas ab.
-		h2.heading Иконки
-		+icon('close')(width="40", height="40")
-		+icon('menu')(width="40", height="40")
+  .notify
+    .notify__inner.container
+      .notify__text You have 1 expired deadline and 11 deadlines expires soon. <a href="#">View To-Do List</a>
+      button.notify__close(type="button")
+        span.visually-hidden Close
+
 
 block footer
 	include modules/footer.pug
-	
