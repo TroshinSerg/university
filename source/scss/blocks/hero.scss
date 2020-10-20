@@ -1,0 +1,110 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 0;
+	background-image: url("../img/hero.jpg");
+	height: 352px;
+
+	@include media(md) {
+		height: 500px;
+	}
+
+	@include media(xl) {
+		height: 700px;
+	}
+
+	&__inner {
+		@include media(xl) {
+			padding-bottom: 40px;
+		}
+	}
+
+	&__heading {
+		margin: 0 0 20px;
+
+		@include text(28px, 37px, $color-white);
+		text-align: center;
+		text-shadow: 0 4px 40px rgba(68, 68, 68, 0.5);
+		align-self: center;
+
+		@include media(md) {
+			margin-bottom: 30px;
+			font-size: 48px;
+			line-height: 63px;
+		}
+	}
+
+	&__search {
+		position: relative;
+		align-self: center;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+
+		label {
+			display: block;
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			padding: 6px 32px 10px;
+
+			@include text(14px, 1, $color-white);
+			font-weight: 600;
+			border: solid 2px $color-white;
+			border-radius: 10px;
+			background-color: transparent;
+			appearance: none;
+
+			transition: border-color $default-transition-settings;
+
+			@include media(md) {
+				padding: 10px 24px 15px 48px;
+				font-size: 18px;
+			}
+
+			&:hover,
+			&:focus {
+				outline: none;
+				border-color: rgba($color-white, 0.7);
+			}
+		}
+
+		button {
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			transform: translateY(-50%);
+			width: 14px;
+			height: 14px;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+
+			svg {
+				display: block;
+				width: 14px;
+				height: 14px;
+			}
+
+			@include media(md) {
+				width: 26px;
+				height: 26px;
+
+				svg {
+					width: 26px;
+					height: 26px;
+				}
+			}
+		}
+
+		input {
+			display: block;
+		}
+	}
+}

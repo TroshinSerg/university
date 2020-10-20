@@ -4,6 +4,17 @@ block variables
 	- let isHome = true;
 
 block content
+	section.hero
+		.hero__inner.container
+			h1.hero__heading Welcome to Student Hub
+
+			.hero__search
+				form(action="#", method="post")
+					label(aria-label="search the site")
+						input(type="search", name="search")
+					button(type="submit")
+						span.visually-hidden search
+						+icon('icon-loupe')(width="26", height="26")
 
 
 
