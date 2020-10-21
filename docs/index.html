@@ -2,403 +2,409 @@
 <html class="no-js" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <link rel="preload" href="fonts/Whitney-Light.woff2" as="font" />
-  <link rel="preload" href="fonts/Whitney-Book.woff2" as="font" />
-  <link rel="preload" href="fonts/Whitney-SemiBold.woff2" as="font" />
-  <link rel="preload" href="fonts/Whitney-Bold.woff2" as="font" />
-  <link rel="stylesheet" href="css/main.min.css">
-  <title>Название страницы в браузере</title>
-  <script>document.createElement("picture");</script>
-  <script src="js/picturefill.js" async></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<link rel="preload" href="fonts/Whitney-Light.woff2" as="font" />
+	<link rel="preload" href="fonts/Whitney-Book.woff2" as="font" />
+	<link rel="preload" href="fonts/Whitney-Semi-Bold.woff2" as="font" />
+	<link rel="preload" href="fonts/Whitney-Bold.woff2" as="font" />
+	<link rel="stylesheet" href="css/main.min.css">
+	<title>Название страницы в браузере</title>
+	<script>document.createElement("picture");</script>
+	<script src="js/picturefill.js" async></script>
 </head>
 
 <body class="webpage">
-  <div style="display: none">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <symbol id="icon-close" viewBox="0 0 8 8">
-        <path d="M.342 7.859a.482.482 0 010-.682L7.175.355a.484.484 0 01.683.682L1.025 7.86a.484.484 0 01-.683 0z" />
-        <path d="M.142.141a.484.484 0 01.683 0l6.833 6.822a.482.482 0 11-.683.682L.142.823a.482.482 0 010-.682z" />
-      </symbol>
-      <symbol id="icon-lightning" viewBox="0 0 18 36">
-        <path d="M3.057 35.897a1.12 1.12 0 01-.458-.555 1.687 1.687 0 01-.11-.82l5.056-15.236H.972a.74.74 0 01-.42-.117 1.053 1.053 0 01-.34-.357 1.514 1.514 0 01-.188-.524 1.736 1.736 0 01.001-.584L6.865.99c.05-.287.172-.543.344-.723A.795.795 0 017.812 0h6.801c.142 0 .281.042.409.125.128.082.24.202.33.351.09.151.154.328.187.517.032.19.033.386.002.576l-5.208 10.917 6.734-.194c.177 0 .351.066.502.194.15.127.272.31.35.526.067.207.094.436.075.662-.018.226-.08.44-.18.623L4.174 35.434a1.136 1.136 0 01-.324.405.769.769 0 01-.424.161.803.803 0 01-.37-.103z" />
-      </symbol>
-      <symbol id="icon-loupe" viewBox="0 0 512.005 512.005">
-        <path d="M505.749 475.587l-145.6-145.6c28.203-34.837 45.184-79.104 45.184-127.317C405.333 90.926 314.41.003 202.666.003S0 90.925 0 202.669s90.923 202.667 202.667 202.667c48.213 0 92.48-16.981 127.317-45.184l145.6 145.6c4.16 4.16 9.621 6.251 15.083 6.251s10.923-2.091 15.083-6.251c8.341-8.341 8.341-21.824-.001-30.165zM202.667 362.669c-88.235 0-160-71.765-160-160s71.765-160 160-160 160 71.765 160 160-71.766 160-160 160z" />
-      </symbol>
-      <symbol id="close" viewBox="0 0 329.269 329">
-        <path d="M194.8 164.77L323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0" />
-      </symbol>
-      <symbol id="icon-next" viewBox="0 0 51 16">
-        <path d="M50.707 8.707a1 1 0 000-1.414L44.343.929a1 1 0 10-1.414 1.414L48.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h50V7H0v2z" />
-      </symbol>
-      <symbol id="icon-prev" viewBox="0 0 51 16">
-        <path d="M.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L2.414 8l5.657-5.657A1 1 0 006.657.93L.293 7.293zM51 7H1v2h50V7z" />
-      </symbol>
-      <symbol id="menu" viewBox="0 -53 384 384">
-        <path d="M368 154.668H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zM368 32H16C7.168 32 0 24.832 0 16S7.168 0 16 0h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 245.332H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 0" />
-      </symbol>
-      <symbol id="icon-right" viewBox="0 0 8 16">
-        <path d="M0 0l8 8-8 8v-2.667L5.333 8 0 2.667V0z" />
-      </symbol>
-    </svg>
-  </div>
-  <div class="notify">
-    <div class="notify__inner container">
-      <div class="notify__text">You have 1 expired deadline and 11 deadlines expires soon.</div>
-      <a class="notify__link" href="#">View To-Do List</a>
-      <button class="notify__close" type="button">
-        <span class="visually-hidden">Close</span>
-        <svg role="none" width="14" height="14">
-          <use xlink:href="#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <header class="header">
-    <div class="header__inner container">
-      <a class="header__logo logo">
-        <picture>
-          <source type="image/webp" srcset="img/Logo.webp 1x, img/Logo@2x.webp 2x">
-          <img src="img/Logo.png" srcset="img/Logo@2x.png 2x" width="112" height="25" alt="logo">
-        </picture>
-      </a>
-      <nav class="header__nav navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">News</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Events</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">My Classes</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">My Cases</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">My Finances</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">My to-do list</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">My appointments</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">My Documents</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__notifications notifications">
-        <button class="notifications__btn" type="button">
-          <span class="visually-hidden">Show notifications</span>
-          <svg role="none" width="18" height="36">
-            <use xlink:href="#icon-lightning"></use>
-          </svg>
-        </button>
-        <span class="notifications__count">12</span>
-        <div class="notifications__dropdown">
-          <div class="notifications__dropdown-header">
-            <div class="notifications__dropdown-heading">Notifications</div>
-            <div class="notifications__dropdown-count">5</div>
-          </div>
-          <ul class="notifications__list">
-            <li class="notifications__item">
-              <a class="notifications__link" href="#">Library Hold!</a>
-            </li>
-            <li class="notifications__item">
-              <a class="notifications__link notifications__link--new" href="#">Past Due Account</a>
-            </li>
-            <li class="notifications__item">
-              <a class="notifications__link notifications__link--new" href="#">Probation</a>
-            </li>
-            <li class="notifications__item">
-              <a class="notifications__link notifications__link--new" href="#">Past Due Account</a>
-            </li>
-            <li class="notifications__item">
-              <a class="notifications__link notifications__link--new" href="#">Probation</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="header__user user">
-        <a class="user__image" href="#">
-          <picture>
-            <source type="image/webp" srcset="img/Account.webp 1x, img/Account@2x.webp 2x">
-            <img src="img/Account.jpg" srcset="img/Account@2x.jpg 2x" width="36" height="36" alt="User avatar">
-          </picture>
-        </a>
-        <ul class="user__dropdown">
-          <li class="user__dropdown-item">
-            <a class="user__dropdown-link" href="#">My Account</a>
-          </li>
-          <li class="user__dropdown-item">
-            <a class="user__dropdown-link" href="#">User Settings</a>
-          </li>
-          <li class="user__dropdown-item">
-            <a class="user__dropdown-link" href="#">User Profile</a>
-          </li>
-          <li class="user__dropdown-item">
-            <a class="user__dropdown-link" href="#">Contact Support</a>
-          </li>
-          <li class="user__dropdown-item">
-            <a class="user__dropdown-link" href="#">News</a>
-          </li>
-        </ul>
-      </div>
-      <button class="header__toggle menu-toggle" type="button" aria-pressed="false">
-        <span class="visually-hidden">Menu</span>
-      </button>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero__inner container">
-        <h1 class="hero__heading">Welcome to Student Hub</h1>
-        <div class="hero__search">
-          <form action="#" method="post">
-            <label aria-label="search the site">
-              <input type="search" name="search">
-            </label>
-            <button type="submit">
-              <span class="visually-hidden">search</span>
-              <svg role="none" width="26" height="26">
-                <use xlink:href="#icon-loupe"></use>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section class="webpage__site-sections site-sections">
-      <div class="site-sections__inner container">
-        <h2 class="visually-hidden">Site sections</h2>
-        <ul class="site-sections__list">
-          <li class="site-sections__item">
-            <a class="site-sections__link" href="#">
-              <span class="site-sections__text">My Classes</span>
-              <span class="site-sections__icon">
-                <svg role="none" width="7" height="13">
-                  <use xlink:href="#icon-right"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-sections__item">
-            <a class="site-sections__link" href="#">
-              <span class="site-sections__text">My Cases</span>
-              <span class="site-sections__icon">
-                <svg role="none" width="7" height="13">
-                  <use xlink:href="#icon-right"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-sections__item">
-            <a class="site-sections__link" href="#">
-              <span class="site-sections__text">My Finances</span>
-              <span class="site-sections__icon">
-                <svg role="none" width="7" height="13">
-                  <use xlink:href="#icon-right"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-sections__item">
-            <a class="site-sections__link" href="#">
-              <span class="site-sections__text">My To-Do List</span>
-              <span class="site-sections__icon">
-                <svg role="none" width="7" height="13">
-                  <use xlink:href="#icon-right"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-sections__item">
-            <a class="site-sections__link" href="#">
-              <span class="site-sections__text">My Appointments</span>
-              <span class="site-sections__icon">
-                <svg role="none" width="7" height="13">
-                  <use xlink:href="#icon-right"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-sections__item">
-            <a class="site-sections__link" href="#">
-              <span class="site-sections__text">My Documents</span>
-              <span class="site-sections__icon">
-                <svg role="none" width="7" height="13">
-                  <use xlink:href="#icon-right"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="webpage__events events">
-      <div class="events__inner container">
-        <header class="events__header">
-          <h2 class="events__heading heading">Upcoming Events</h2>
-          <a class="events__all" href="#">View all Events</a>
-        </header>
-        <div class="events__wrapper">
-          <div class="events__nav"></div>
-          <div class="events__slider js-events-slider owl-carousel">
-            <div class="events__item event">
-              <h3 class="event__heading">
-                <a href="#">Time Management Student Success</a>
-              </h3>
-              <div class="event__category">Workshop</div>
-              <div class="event__info">
-                <time class="event__date" datetime="2020-05-13">5/13/2020</time>
-                <ul class="event__list">
-                  <li class="event__item">19 PM — 22 PM</li>
-                  <li class="event__item">Library</li>
-                </ul>
-              </div>
-            </div>
-            <div class="events__item event">
-              <h3 class="event__heading">
-                <a href="#">Wednesday Student Wnd-Down Free Meditation</a>
-              </h3>
-              <div class="event__category">Online talks</div>
-              <div class="event__info">
-                <time class="event__date" datetime="2020-05-13">5/13/2020</time>
-                <ul class="event__list">
-                  <li class="event__item">19 PM — 22 PM</li>
-                  <li class="event__item">Library</li>
-                </ul>
-              </div>
-            </div>
-            <div class="events__item event">
-              <h3 class="event__heading">
-                <a href="#">Staying job ready after Covid-19</a>
-              </h3>
-              <div class="event__category">Online-lecture</div>
-              <div class="event__info">
-                <time class="event__date" datetime="2020-05-13">5/13/2020</time>
-                <ul class="event__list">
-                  <li class="event__item">19 PM — 22 PM</li>
-                  <li class="event__item">Library</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="news">
-      <div class="news__inner container">
-        <header class="news__header">
-          <h2 class="news__heading heading">News</h2>
-          <a class="news__all" href="#">View all News</a>
-        </header>
-        <ul class="news__list">
-          <li class="news__item news-card">
-            <a class="news-card__image" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/news-1.webp 1x, img/news-1@2x.webp 2x">
-                <img src="img/news-1.jpg" srcset="img/news-1@2x.jpg 2x" width="367" height="240" alt="image">
-              </picture>
-            </a>
-            <div class="news-card__category">Feature</div>
-            <h3 class="news-card__heading">
-              <a href="#">When is Wakanda: Professors, alumni partner with Oakland museum to host Afrofuturism...</a>
-            </h3>
-            <time class="news-card__date" datetime="2020-05-03">May 3, 2020</time>
-          </li>
-          <li class="news__item news-card">
-            <a class="news-card__image" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/news-2.webp 1x, img/news-2@2x.webp 2x">
-                <img src="img/news-2.jpg" srcset="img/news-2@2x.jpg 2x" width="367" height="240" alt="image">
-              </picture>
-            </a>
-            <div class="news-card__category">Feature</div>
-            <h3 class="news-card__heading">
-              <a href="#">A Holistic Approach to Student Advising</a>
-            </h3>
-            <time class="news-card__date" datetime="2020-05-03">May 3, 2020</time>
-          </li>
-          <li class="news__item news-card">
-            <a class="news-card__image" href="#">
-              <picture>
-                <source type="image/webp" srcset="img/news-3.webp 1x, img/news-3@2x.webp 2x">
-                <img src="img/news-3.jpg" srcset="img/news-3@2x.jpg 2x" width="367" height="240" alt="image">
-              </picture>
-            </a>
-            <div class="news-card__category">Feature</div>
-            <h3 class="news-card__heading">
-              <a href="#">Cal State East Bay faculty, students spend month in Okinawa capturing histories</a>
-            </h3>
-            <time class="news-card__date" datetime="2020-05-03">May 3, 2020</time>
-          </li>
-        </ul>
-        <a class="news__more" href="#">More News</a>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="container">
-        <a class="footer__logo logo">
-          <picture>
-            <source type="image/webp" srcset="img/Logo.webp 1x, img/Logo@2x.webp 2x">
-            <img src="img/Logo.png" srcset="img/Logo@2x.png 2x" width="112" height="25" alt="logo">
-          </picture>
-        </a>
-        <address class="footer__address">25800 Carlos Bee Boulevard Hayward, CA 94542 510‑885‑3000</address>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <ul class="footer__social">
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">Facebook</a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">Twitter</a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">Instagram</a>
-          </li>
-          <li class="footer__social-item">
-            <a class="footer__social-link" href="#" target="_blank">Pinterest</a>
-          </li>
-        </ul>
-        <div class="footer__copyright">© 2020 California State University, East Bay. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
-  <sectoin class="modal">
-    <div class="modal__inner">
-      <button class="modal__close" type="button">
-        <span class="visually-hidden">Close modal</span>
-        <svg role="none" width="8" height="8">
-          <use xlink:href="#icon-close"></use>
-        </svg>
-      </button>
-      <h2 class="modal__heading">
-        <span class="modal__heading-icon">
-          <svg role="none" width="10" height="18">
-            <use xlink:href="#icon-lightning"></use>
-          </svg>
-        </span>Action
-      </h2>
-      <div class="modal__text">
-        <p>Please pay overdue account balance to restore registration access and university services.</p>
-        <p>View your account balance online through MyCSUEB.</p>
-        <p>Contact Student Financial Services at (510-885-3767) if you have any questions.</p>
-      </div>
-    </div>
-  </sectoin>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/main.min.js"></script>
+	<div style="display: none">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+			<symbol id="icon-close" viewBox="0 0 8 8">
+				<path d="M.342 7.859a.482.482 0 010-.682L7.175.355a.484.484 0 01.683.682L1.025 7.86a.484.484 0 01-.683 0z" />
+				<path d="M.142.141a.484.484 0 01.683 0l6.833 6.822a.482.482 0 11-.683.682L.142.823a.482.482 0 010-.682z" />
+			</symbol>
+			<symbol id="icon-lightning" viewBox="0 0 18 36">
+				<path
+					d="M3.057 35.897a1.12 1.12 0 01-.458-.555 1.687 1.687 0 01-.11-.82l5.056-15.236H.972a.74.74 0 01-.42-.117 1.053 1.053 0 01-.34-.357 1.514 1.514 0 01-.188-.524 1.736 1.736 0 01.001-.584L6.865.99c.05-.287.172-.543.344-.723A.795.795 0 017.812 0h6.801c.142 0 .281.042.409.125.128.082.24.202.33.351.09.151.154.328.187.517.032.19.033.386.002.576l-5.208 10.917 6.734-.194c.177 0 .351.066.502.194.15.127.272.31.35.526.067.207.094.436.075.662-.018.226-.08.44-.18.623L4.174 35.434a1.136 1.136 0 01-.324.405.769.769 0 01-.424.161.803.803 0 01-.37-.103z" />
+			</symbol>
+			<symbol id="icon-loupe" viewBox="0 0 512.005 512.005">
+				<path
+					d="M505.749 475.587l-145.6-145.6c28.203-34.837 45.184-79.104 45.184-127.317C405.333 90.926 314.41.003 202.666.003S0 90.925 0 202.669s90.923 202.667 202.667 202.667c48.213 0 92.48-16.981 127.317-45.184l145.6 145.6c4.16 4.16 9.621 6.251 15.083 6.251s10.923-2.091 15.083-6.251c8.341-8.341 8.341-21.824-.001-30.165zM202.667 362.669c-88.235 0-160-71.765-160-160s71.765-160 160-160 160 71.765 160 160-71.766 160-160 160z" />
+			</symbol>
+			<symbol id="close" viewBox="0 0 329.269 329">
+				<path
+					d="M194.8 164.77L323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0015.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0" />
+			</symbol>
+			<symbol id="icon-next" viewBox="0 0 51 16">
+				<path
+					d="M50.707 8.707a1 1 0 000-1.414L44.343.929a1 1 0 10-1.414 1.414L48.586 8l-5.657 5.657a1 1 0 001.414 1.414l6.364-6.364zM0 9h50V7H0v2z" />
+			</symbol>
+			<symbol id="icon-prev" viewBox="0 0 51 16">
+				<path
+					d="M.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L2.414 8l5.657-5.657A1 1 0 006.657.93L.293 7.293zM51 7H1v2h50V7z" />
+			</symbol>
+			<symbol id="menu" viewBox="0 -53 384 384">
+				<path
+					d="M368 154.668H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zM368 32H16C7.168 32 0 24.832 0 16S7.168 0 16 0h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 245.332H16c-8.832 0-16-7.168-16-16s7.168-16 16-16h352c8.832 0 16 7.168 16 16s-7.168 16-16 16zm0 0" />
+			</symbol>
+			<symbol id="icon-right" viewBox="0 0 8 16">
+				<path d="M0 0l8 8-8 8v-2.667L5.333 8 0 2.667V0z" />
+			</symbol>
+		</svg>
+	</div>
+	<div class="notify">
+		<div class="notify__inner container">
+			<div class="notify__text">You have 1 expired deadline and 11 deadlines expires soon.</div>
+			<a class="notify__link" href="#">View To-Do List</a>
+			<button class="notify__close" type="button">
+				<span class="visually-hidden">Close</span>
+				<svg role="none" width="14" height="14">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<header class="header">
+		<div class="header__inner container">
+			<a class="header__logo logo">
+				<picture>
+					<source type="image/webp" srcset="img/Logo.webp 1x, img/Logo@2x.webp 2x">
+					<img src="img/Logo.png" srcset="img/Logo@2x.png 2x" width="112" height="25" alt="logo">
+				</picture>
+			</a>
+			<nav class="header__nav navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">News</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">Events</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">My Classes</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">My Cases</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">My Finances</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">My to-do list</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">My appointments</a>
+					</li>
+					<li class="navigation__item">
+						<a class="navigation__link" href="#">My Documents</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header__notifications notifications">
+				<button class="notifications__btn" type="button">
+					<span class="visually-hidden">Show notifications</span>
+					<svg role="none" width="18" height="36">
+						<use xlink:href="#icon-lightning"></use>
+					</svg>
+				</button>
+				<span class="notifications__count">12</span>
+				<div class="notifications__dropdown">
+					<div class="notifications__dropdown-header">
+						<div class="notifications__dropdown-heading">Notifications</div>
+						<div class="notifications__dropdown-count">5</div>
+					</div>
+					<ul class="notifications__list">
+						<li class="notifications__item">
+							<a class="notifications__link" href="#">Library Hold!</a>
+						</li>
+						<li class="notifications__item">
+							<a class="notifications__link notifications__link--new" href="#">Past Due Account</a>
+						</li>
+						<li class="notifications__item">
+							<a class="notifications__link notifications__link--new" href="#">Probation</a>
+						</li>
+						<li class="notifications__item">
+							<a class="notifications__link notifications__link--new" href="#">Past Due Account</a>
+						</li>
+						<li class="notifications__item">
+							<a class="notifications__link notifications__link--new" href="#">Probation</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header__user user">
+				<a class="user__image" href="#">
+					<picture>
+						<source type="image/webp" srcset="img/Account.webp 1x, img/Account@2x.webp 2x">
+						<img src="img/Account.jpg" srcset="img/Account@2x.jpg 2x" width="36" height="36" alt="User avatar">
+					</picture>
+				</a>
+				<ul class="user__dropdown">
+					<li class="user__dropdown-item">
+						<a class="user__dropdown-link" href="#">My Account</a>
+					</li>
+					<li class="user__dropdown-item">
+						<a class="user__dropdown-link" href="#">User Settings</a>
+					</li>
+					<li class="user__dropdown-item">
+						<a class="user__dropdown-link" href="#">User Profile</a>
+					</li>
+					<li class="user__dropdown-item">
+						<a class="user__dropdown-link" href="#">Contact Support</a>
+					</li>
+					<li class="user__dropdown-item">
+						<a class="user__dropdown-link" href="#">News</a>
+					</li>
+				</ul>
+			</div>
+			<button class="header__toggle menu-toggle" type="button" aria-pressed="false">
+				<span class="visually-hidden">Menu</span>
+			</button>
+		</div>
+	</header>
+	<main>
+		<section class="hero">
+			<div class="hero__inner container">
+				<h1 class="hero__heading">Welcome to Student Hub</h1>
+				<div class="hero__search">
+					<form action="#" method="post">
+						<label aria-label="search the site">
+							<input type="search" name="search">
+						</label>
+						<button type="submit">
+							<span class="visually-hidden">search</span>
+							<svg role="none" width="26" height="26">
+								<use xlink:href="#icon-loupe"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="webpage__site-sections site-sections">
+			<div class="site-sections__inner container">
+				<h2 class="visually-hidden">Site sections</h2>
+				<ul class="site-sections__list">
+					<li class="site-sections__item">
+						<a class="site-sections__link" href="#">
+							<span class="site-sections__text">My Classes</span>
+							<span class="site-sections__icon">
+								<svg role="none" width="7" height="13">
+									<use xlink:href="#icon-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+					<li class="site-sections__item">
+						<a class="site-sections__link" href="#">
+							<span class="site-sections__text">My Cases</span>
+							<span class="site-sections__icon">
+								<svg role="none" width="7" height="13">
+									<use xlink:href="#icon-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+					<li class="site-sections__item">
+						<a class="site-sections__link" href="#">
+							<span class="site-sections__text">My Finances</span>
+							<span class="site-sections__icon">
+								<svg role="none" width="7" height="13">
+									<use xlink:href="#icon-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+					<li class="site-sections__item">
+						<a class="site-sections__link" href="#">
+							<span class="site-sections__text">My To-Do List</span>
+							<span class="site-sections__icon">
+								<svg role="none" width="7" height="13">
+									<use xlink:href="#icon-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+					<li class="site-sections__item">
+						<a class="site-sections__link" href="#">
+							<span class="site-sections__text">My Appointments</span>
+							<span class="site-sections__icon">
+								<svg role="none" width="7" height="13">
+									<use xlink:href="#icon-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+					<li class="site-sections__item">
+						<a class="site-sections__link" href="#">
+							<span class="site-sections__text">My Documents</span>
+							<span class="site-sections__icon">
+								<svg role="none" width="7" height="13">
+									<use xlink:href="#icon-right"></use>
+								</svg>
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="webpage__events events">
+			<div class="events__inner container">
+				<header class="events__header">
+					<h2 class="events__heading heading">Upcoming Events</h2>
+					<a class="events__all" href="#">View all Events</a>
+				</header>
+				<div class="events__wrapper">
+					<div class="events__nav"></div>
+					<div class="events__slider js-events-slider owl-carousel">
+						<div class="events__item event">
+							<h3 class="event__heading">
+								<a href="#">Time Management Student Success</a>
+							</h3>
+							<div class="event__category">Workshop</div>
+							<div class="event__info">
+								<time class="event__date" datetime="2020-05-13">5/13/2020</time>
+								<ul class="event__list">
+									<li class="event__item">19 PM — 22 PM</li>
+									<li class="event__item">Library</li>
+								</ul>
+							</div>
+						</div>
+						<div class="events__item event">
+							<h3 class="event__heading">
+								<a href="#">Wednesday Student Wnd-Down Free Meditation</a>
+							</h3>
+							<div class="event__category">Online talks</div>
+							<div class="event__info">
+								<time class="event__date" datetime="2020-05-13">5/13/2020</time>
+								<ul class="event__list">
+									<li class="event__item">19 PM — 22 PM</li>
+									<li class="event__item">Library</li>
+								</ul>
+							</div>
+						</div>
+						<div class="events__item event">
+							<h3 class="event__heading">
+								<a href="#">Staying job ready after Covid-19</a>
+							</h3>
+							<div class="event__category">Online-lecture</div>
+							<div class="event__info">
+								<time class="event__date" datetime="2020-05-13">5/13/2020</time>
+								<ul class="event__list">
+									<li class="event__item">19 PM — 22 PM</li>
+									<li class="event__item">Library</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="news">
+			<div class="news__inner container">
+				<header class="news__header">
+					<h2 class="news__heading heading">News</h2>
+					<a class="news__all" href="#">View all News</a>
+				</header>
+				<ul class="news__list">
+					<li class="news__item news-card">
+						<a class="news-card__image" href="#">
+							<picture>
+								<source type="image/webp" srcset="img/news-1.webp 1x, img/news-1@2x.webp 2x">
+								<img src="img/news-1.jpg" srcset="img/news-1@2x.jpg 2x" width="367" height="240" alt="image">
+							</picture>
+						</a>
+						<div class="news-card__category">Feature</div>
+						<h3 class="news-card__heading">
+							<a href="#">When is Wakanda: Professors, alumni partner with Oakland museum to host Afrofuturism...</a>
+						</h3>
+						<time class="news-card__date" datetime="2020-05-03">May 3, 2020</time>
+					</li>
+					<li class="news__item news-card">
+						<a class="news-card__image" href="#">
+							<picture>
+								<source type="image/webp" srcset="img/news-2.webp 1x, img/news-2@2x.webp 2x">
+								<img src="img/news-2.jpg" srcset="img/news-2@2x.jpg 2x" width="367" height="240" alt="image">
+							</picture>
+						</a>
+						<div class="news-card__category">Feature</div>
+						<h3 class="news-card__heading">
+							<a href="#">A Holistic Approach to Student Advising</a>
+						</h3>
+						<time class="news-card__date" datetime="2020-05-03">May 3, 2020</time>
+					</li>
+					<li class="news__item news-card">
+						<a class="news-card__image" href="#">
+							<picture>
+								<source type="image/webp" srcset="img/news-3.webp 1x, img/news-3@2x.webp 2x">
+								<img src="img/news-3.jpg" srcset="img/news-3@2x.jpg 2x" width="367" height="240" alt="image">
+							</picture>
+						</a>
+						<div class="news-card__category">Feature</div>
+						<h3 class="news-card__heading">
+							<a href="#">Cal State East Bay faculty, students spend month in Okinawa capturing histories</a>
+						</h3>
+						<time class="news-card__date" datetime="2020-05-03">May 3, 2020</time>
+					</li>
+				</ul>
+				<a class="news__more" href="#">More News</a>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__top">
+			<div class="container">
+				<a class="footer__logo logo">
+					<picture>
+						<source type="image/webp" srcset="img/Logo.webp 1x, img/Logo@2x.webp 2x">
+						<img src="img/Logo.png" srcset="img/Logo@2x.png 2x" width="112" height="25" alt="logo">
+					</picture>
+				</a>
+				<address class="footer__address">25800 Carlos Bee Boulevard Hayward, CA 94542 510‑885‑3000</address>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<ul class="footer__social">
+					<li class="footer__social-item">
+						<a class="footer__social-link" href="#" target="_blank">Facebook</a>
+					</li>
+					<li class="footer__social-item">
+						<a class="footer__social-link" href="#" target="_blank">Twitter</a>
+					</li>
+					<li class="footer__social-item">
+						<a class="footer__social-link" href="#" target="_blank">Instagram</a>
+					</li>
+					<li class="footer__social-item">
+						<a class="footer__social-link" href="#" target="_blank">Pinterest</a>
+					</li>
+				</ul>
+				<div class="footer__copyright">© 2020 California State University, East Bay. All rights reserved.</div>
+			</div>
+		</div>
+	</footer>
+	<sectoin class="modal">
+		<div class="modal__inner">
+			<button class="modal__close" type="button">
+				<span class="visually-hidden">Close modal</span>
+				<svg role="none" width="8" height="8">
+					<use xlink:href="#icon-close"></use>
+				</svg>
+			</button>
+			<h2 class="modal__heading">
+				<span class="modal__heading-icon">
+					<svg role="none" width="10" height="18">
+						<use xlink:href="#icon-lightning"></use>
+					</svg>
+				</span>Action
+			</h2>
+			<div class="modal__text">
+				<p>Please pay overdue account balance to restore registration access and university services.</p>
+				<p>View your account balance online through MyCSUEB.</p>
+				<p>Contact Student Financial Services at (510-885-3767) if you have any questions.</p>
+			</div>
+		</div>
+	</sectoin>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.min.js"></script>
 </body>
 
 </html>
