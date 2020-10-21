@@ -129,7 +129,11 @@
 
 		@include media(xl) {
 			margin-left: auto;
-			width: 962px;
+			width: 932px;
+
+			.owl-item {
+				padding-left: 1px;
+			}
 		}
 	}
 
